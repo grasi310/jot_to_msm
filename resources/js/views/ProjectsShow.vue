@@ -7,7 +7,7 @@
                     < Back
                 </a>
                 <div class="relative">
-                    <router-link :to="'/contacts/' + contact.contact_id + '/edit'"
+                    <router-link :to="'/projects/' + project.project_id + '/edit'"
                                  class="px-4 py-2 rounded text-sm text-green-500 border border-green-500 text-sm font-bold mr-2">
                         Edit
                     </router-link>
@@ -31,45 +31,51 @@
                      @click="modal = ! modal"></div>
             </div>
 
+            <div class="flex justify-between">
+                <div>
+                    <div class="flex items-center pt-6">
+                        <UserCircle :name="project.name"/>
 
-            <div>
-                <div class="flex items-center pt-6">
-                    <UserCircle :name="contact.name"/>
+                        <p class="pl-5 text-xl">{{ project.name }}</p>
+                    </div>
 
-                    <p class="pl-5 text-xl">{{ contact.name }}</p>
+                    <p class="pt-6 text-gray-600 font-bold uppercase text-sm">Company</p>
+                    <p class="pt-2 text-blue-400">{{ project.company }}</p>
+
+
+                    <p class="pt-6 text-gray-600 font-bold uppercase text-sm">Location</p>
+                    <p class="pt-2 text-blue-400">{{ project.location }}</p>
+
+
+                    <p class="pt-6 text-gray-600 font-bold uppercase text-sm">Description</p>
+                    <p class="pt-2 text-blue-400">{{ project.description }}</p>
                 </div>
 
-                <p class="pt-6 text-gray-600 font-bold uppercase text-sm">Contact</p>
-                <p class="pt-2 text-blue-400">{{ contact.email }}</p>
-
-
-                <p class="pt-6 text-gray-600 font-bold uppercase text-sm">Company</p>
-                <p class="pt-2 text-blue-400">{{ contact.company }}</p>
-
-
-                <p class="pt-6 text-gray-600 font-bold uppercase text-sm">Birthday</p>
-                <p class="pt-2 text-blue-400">{{ contact.birthday }}</p>
+                <div id="mapBox" class="z-10 pt-8">
+                    <Map></Map>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </template>
 
 <script>
     import UserCircle from "../components/UserCircle";
+    import Map from "../components/Map";
 
 
     export default {
-        name: "ContactsShow",
+        name: "ProjectsShow",
 
         components: {
             UserCircle,
+            Map,
         },
 
         mounted() {
-            axios.get('/api/contacts/' + this.$route.params.id)
+            axios.get('/api/projects/' + this.$route.params.id)
                 .then(response => {
-                    this.contact = response.data.data;
+                    this.project = response.data.data;
 
                     this.loading = false;
                 })
@@ -77,7 +83,7 @@
                     this.loading = false;
 
                     if (error.response.status === 404) {
-                        this.$router.push('/contacts');
+                        this.$router.push('/projects');
                     }
                 });
         },
@@ -86,18 +92,18 @@
             return {
                 loading: true,
                 modal: false,
-                contact: null,
+                project: null,
             };
         },
 
         methods: {
             destroy: function () {
-                axios.delete('/api/contacts/' + this.$route.params.id)
+                axios.delete('/api/projects/' + this.$route.params.id)
                     .then(response => {
-                        this.$router.push('/contacts');
+                        this.$router.push('/projects');
                     })
                     .catch(error => {
-                        alert('Internal Error. Unable to delete contact.')
+                        alert('Internal Error. Unable to delete project.')
                     });
             },
         }

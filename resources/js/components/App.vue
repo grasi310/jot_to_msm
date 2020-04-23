@@ -7,8 +7,12 @@
                         <!--                        <svg class="fill-current text-blue-600 w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">-->
                         <!--                            <path d="M3.9 4.2c-.5 0-.8.3-.8.8s.4.8.8.8c.5 0 .8-.4.8-.8.1-.5-.3-.8-.8-.8zM3.3 18.6c0 1.4-.2 2.1-1.5 2.1-.3 0-.7 0-.9-.1l-.3 1.1c.3.1.7.2 1.1.2 1.9 0 2.7-1.2 2.7-3.2V8.1H3.3v10.5zM9.4 17.5c1.4 0 2.3-.4 3-1.2.8-1 1.1-2.1 1.1-3.8 0-1.4-.2-2.7-1-3.5-.6-.7-1.5-1.1-2.9-1.1s-2.3.4-3 1.2c-.8 1-1.1 2.2-1.1 3.8 0 1.5.2 2.6 1 3.5.6.7 1.5 1.1 2.9 1.1zM7.5 9.7c.3-.4.9-.8 2-.8 1 0 1.6.3 1.9.7.5.6.7 1.7.7 2.9s-.2 2.4-.7 3.1c-.3.4-.9.8-2 .8-1 0-1.6-.3-1.9-.7-.5-.6-.7-1.6-.7-2.9 0-1.2.2-2.4.7-3.1zM15 14.4c0 2.1.4 3.1 2.5 3.1.6 0 1.3-.1 1.8-.2l-.1-1c-.5.1-1 .2-1.5.2-1.4 0-1.5-.6-1.5-2.1v-5h3V8.3h-3v-3l-1.2.2v2.7h-1.8v1.1H15v5.1zM6 18h17v1H6z"/>-->
                         <!--                        </svg>-->
-                        <svg class="fill-current text-blue-600 w-20 h-auto" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="310px" viewBox="0 0 400 310" enable-background="new 0 0 400 310" xml:space="preserve">  <image id="image0" width="400" height="310" x="0" y="0"
-                                                                                                                                                                                                                                                                           xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAE2CAYAAABP+sQ/AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+                        <svg class="fill-current text-blue-600 w-20 h-auto" version="1.1" id="Layer_1"
+                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="400px" height="310px" viewBox="0 0 400 310"
+                             enable-background="new 0 0 400 310" xml:space="preserve">  <image id="image0" width="400"
+                                                                                               height="310" x="0" y="0"
+                                                                                               xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAE2CAYAAABP+sQ/AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAACA
 AElEQVR42uz9aZBdZ3rnif3+77lL7nsmkGCCAAiA2EhiB7iVVCW1pJKakno0Ac54ZIfDMREte3pa
 08vI3d/q1ke3S1VtKromWB9a+jZh0HaEw+2Wu91jUi0VN2wkSCQ3kAQJgNhzz7x5l/P+/eFmslgs
@@ -714,7 +718,7 @@ Hb9tvLdNm+89H1Z/UZjs6i9XmrVKPZYrSZp1pMQKQDHRYqpCrRzqtVqxUuufn6y35l+0afPa0jYg
 bdosYevDP/8kmWAg9G6aSWae9CYdi4sJwGLHbNa7qZzNPOnNBpiIn/zkwwzJ3/Yt27Rp06ZNmzZt
 Xjv+fyazOz6evi3DAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTA0LTIxVDIzOjA0OjI0KzAzOjAw
 bjDu3wAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wNC0yMVQyMzowNDoyNCswMzowMB9tVmMAAAAA
-SUVORK5CYII=" />
+SUVORK5CYII="/>
                         </svg>
 
 
@@ -722,15 +726,33 @@ SUVORK5CYII=" />
 
                     <p class="pt-12 text-gray-500 text-xs uppercase font-bold">Create</p>
 
+                    <router-link to="/projects/create" class="flex items-center py-2 hover:text-blue-600 text-sm">
+                        <svg viewBox="0 0 24 24" class="fill-current text-blue-600 w-5 h-5">
+                            <path
+                                d="M23.3 11.9c0 .9-.6 1.4-1.4 1.4h-8.5v8.5c0 .9-.6 1.4-1.4 1.4s-1.4-.6-1.4-1.4v-8.5H2c-.9 0-1.4-.6-1.4-1.4 0-.9.6-1.4 1.4-1.4h8.5V1.9c0-.9.6-1.4 1.4-1.4s1.4.6 1.4 1.4v8.5h8.5c.9 0 1.5.6 1.5 1.5z"/>
+                        </svg>
+                        <div class="tracking-wide pl-3">Add New Project</div>
+                    </router-link>
+
                     <router-link to="/contacts/create" class="flex items-center py-2 hover:text-blue-600 text-sm">
                         <svg viewBox="0 0 24 24" class="fill-current text-blue-600 w-5 h-5">
                             <path
                                 d="M23.3 11.9c0 .9-.6 1.4-1.4 1.4h-8.5v8.5c0 .9-.6 1.4-1.4 1.4s-1.4-.6-1.4-1.4v-8.5H2c-.9 0-1.4-.6-1.4-1.4 0-.9.6-1.4 1.4-1.4h8.5V1.9c0-.9.6-1.4 1.4-1.4s1.4.6 1.4 1.4v8.5h8.5c.9 0 1.5.6 1.5 1.5z"/>
                         </svg>
-                        <div class="tracking-wide pl-3">Add New</div>
+                        <div class="tracking-wide pl-3">Add New Contact</div>
                     </router-link>
 
                     <p class="pt-12 text-gray-500 text-xs uppercase font-bold">General</p>
+
+                    <router-link to="/projects" class="flex items-center py-2 hover:text-blue-600 text-sm">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="hard-hat"
+                             class="fill-current text-blue-600 w-5 h-5 svg-inline--fa fa-hard-hat fa-w-16" role="img"
+                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                  d="M480 288c0-80.25-49.28-148.92-119.19-177.62L320 192V80a16 16 0 0 0-16-16h-96a16 16 0 0 0-16 16v112l-40.81-81.62C81.28 139.08 32 207.75 32 288v64h448zm16 96H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h480a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"></path>
+                        </svg>
+                        <div class="tracking-wide pl-3">Projects</div>
+                    </router-link>
 
                     <router-link to="/contacts" class="flex items-center py-2 hover:text-blue-600 text-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"

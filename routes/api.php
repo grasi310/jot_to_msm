@@ -23,7 +23,14 @@ Route::middleware('auth:api')->group(function () {
 
     Route::get('birthdays', 'BirthdaysController@index');
 
-    Route::post('search', 'SearchContwwroller@index');
+    Route::post('search', 'SearchController@index');
+
+    Route::get('/projects', 'ProjectsController@index');
+    Route::post('/projects', 'ProjectsController@store');
+    Route::get('/projects/{project}', 'ProjectsController@show');
+    Route::patch('/projects/{project}', 'ProjectsController@update');
+    Route::delete('/projects/{project}', 'ProjectsController@destroy');
+
 });
 
 
