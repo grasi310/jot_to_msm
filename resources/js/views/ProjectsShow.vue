@@ -33,11 +33,9 @@
 
             <div class="flex justify-between">
                 <div>
-                    <div class="flex items-center pt-6">
-                        <UserCircle :name="project.name"/>
 
-                        <p class="pl-5 text-xl">{{ project.name }}</p>
-                    </div>
+                    <p class="pt-6 text-xl">{{ project.name }}</p>
+
 
                     <p class="pt-6 text-gray-600 font-bold uppercase text-sm">Company</p>
                     <p class="pt-2 text-blue-400">{{ project.company }}</p>
@@ -60,7 +58,6 @@
 </template>
 
 <script>
-    import UserCircle from "../components/UserCircle";
     import Map from "../components/Map";
 
 
@@ -68,7 +65,6 @@
         name: "ProjectsShow",
 
         components: {
-            UserCircle,
             Map,
         },
 

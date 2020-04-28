@@ -10,19 +10,16 @@
             @update:center="centerUpdate"
             @update:zoom="zoomUpdate"
         >
+            <v-geosearch :options="geosearchOptions" ></v-geosearch>
             <l-tile-layer
                 :url="url"
                 :attribution="attribution"
             />
             <l-marker :lat-lng="withPopup">
                 <l-popup>
-                    <div @click="innerClick">
+                    <div @click="showLongText">
                         HTB Imst
-                        <p v-show="showParagraph">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                            sed pretium nisl, ut sagittis sapien. Sed vel sollicitudin nisi.
-                            Donec finibus semper metus id malesuada.
-                        </p>
+                        <p v-show="showParagraph">Testgelände MSM</p>
                     </div>
                 </l-popup>
             </l-marker>
@@ -34,6 +31,11 @@
 <script>
     import {latLng} from "leaflet";
     import {LMap, LTileLayer, LMarker, LPopup, LTooltip} from "vue2-leaflet";
+    import { OpenStreetMapProvider } from 'leaflet-geosearch';
+    import VGeosearch from 'vue2-leaflet-geosearch';
+
+    // Vue.component('v-map', Vue2Leaflet.Map);
+    // Vue.component('v-tilelayer', Vue2Leaflet.TileLayer);
 
     export default {
         name: "Map",
@@ -42,23 +44,27 @@
             LTileLayer,
             LMarker,
             LPopup,
-            LTooltip
+            LTooltip,
+            VGeosearch,
         },
         data() {
             return {
                 zoom: 13,
-                center: latLng(47.213756,10.7533608),
+                center: latLng(47.213756, 10.7533608),
                 url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 attribution:
                     '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-                withPopup: latLng(47.213756,10.7533608),
+                withPopup: latLng(47.213756, 10.7533608),
                 currentZoom: 11.5,
-                currentCenter: latLng(47.213756,10.7533608),
+                currentCenter: latLng(47.213756, 10.7533608),
                 showParagraph: false,
                 mapOptions: {
                     zoomSnap: 0.5
                 },
-                showMap: true
+                showMap: true,
+                geosearchOptions: { // Important part Here
+                    provider: new OpenStreetMapProvider(),
+                },
             };
         },
         methods: {
@@ -73,7 +79,7 @@
             },
             innerClick() {
                 alert("Click!");
-            }
+            },
         }
     }
 </script>

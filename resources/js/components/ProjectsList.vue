@@ -13,9 +13,8 @@
             <div v-for="project in projects">
                 <router-link :to="'/projects/' + project.data.project_id"
                              class="flex items-center border-b border-gray-400 p-4 hover:bg-gray-100">
-                    <UserCircle :name="project.data.name"/>
 
-                    <div class="pl-4">
+                    <div class="">
                         <p class="text-blue-400 font-bold">{{ project.data.name }}</p>
                         <p class="text-gray-600">{{ project.data.company }}</p>
                     </div>
@@ -26,13 +25,11 @@
 </template>
 
 <script>
-    import UserCircle from './UserCircle';
 
     export default {
         name: "ProjectsList",
 
         components: {
-            UserCircle
         },
 
         props: [

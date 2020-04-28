@@ -8,13 +8,13 @@
 
         <form @submit.prevent="submitForm">
             <InputField name="name" label="Project Name" :errors="errors" placeholder="Project Name"
-                        @update:field="form.name = $event" :data="form.name"></InputField>
-            <InputField name="email" label="Project EMail" :errors="errors" placeholder="Project Email"
-                        @update:field="form.email = $event" :data="form.email"></InputField>
+                        @update:field="form.name = $event"></InputField>
             <InputField name="company" label="Company" :errors="errors" placeholder="Company"
-                        @update:field="form.company = $event" :data="form.company"></InputField>
-            <InputField name="birthday" label="Birthday" :errors="errors" placeholder="DD/MM/YYYY"
-                        @update:field="form.birthday = $event" :data="form.birthday"></InputField>
+                        @update:field="form.company = $event"></InputField>
+            <InputField name="location" label="Location" :errors="errors" placeholder="Location"
+                        @update:field="form.location = $event"></InputField>
+            <InputField name="description" label="Description" :errors="errors" placeholder="Description"
+                        @update:field="form.description = $event"></InputField>
 
             <div class="flex justify-end">
                 <button class="py-2 px-4 rounded text-red-700 border mr-5 hover:border-red-700">Cancel</button>
