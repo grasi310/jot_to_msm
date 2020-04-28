@@ -49,8 +49,15 @@
                     <p class="pt-2 text-blue-400">{{ project.description }}</p>
                 </div>
 
-                <div id="mapBox" class="z-10 pt-8">
-                    <Map></Map>
+                <div class="flex flex-col">
+                    <div id="mapBox" class="z-10 pt-8">
+                        <Map></Map>
+                    </div>
+                    <div class="z-10">
+                        <iframe width="500" height="315" src="https://www.youtube.com/embed/EEIk7gwjgIM" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>

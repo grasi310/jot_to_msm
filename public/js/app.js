@@ -3750,6 +3750,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ProjectsShow",
@@ -40426,17 +40433,40 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "z-10 pt-8", attrs: { id: "mapBox" } },
-              [_c("Map")],
-              1
-            )
+            _c("div", { staticClass: "flex flex-col" }, [
+              _c(
+                "div",
+                { staticClass: "z-10 pt-8", attrs: { id: "mapBox" } },
+                [_c("Map")],
+                1
+              ),
+              _vm._v(" "),
+              _vm._m(0)
+            ])
           ])
         ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "z-10" }, [
+      _c("iframe", {
+        attrs: {
+          width: "500",
+          height: "315",
+          src: "https://www.youtube.com/embed/EEIk7gwjgIM",
+          frameborder: "0",
+          allow:
+            "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+          allowfullscreen: ""
+        }
+      })
+    ])
+  }
+]
 render._withStripped = true
 
 
